@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu on Click</title>
+<style>
+  /* Styles for the dropdown menu */
+  .footer{
+    color: white;
+    text-align: center;
+    bottom: 0%;
+    padding-top: 30px;
+    }
+ 
+  .nav{
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+  }
+    img{
+      border-radius: 50%;
+    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(red, green, blue, alpha);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #000000}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  span{
+    margin-left: 100px;
+  }
+  /* features fieldset block */
+    fieldset {
+            display: grid;
+            width: 90%;
+            margin: 20px;
+            margin-top: 40px;
+            border: 1px solid rgb(103, 249, 154);
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            margin-left: 75px;
+            margin-right: auto;
+        }
+        legend {
+            
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .feature img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .feature-details {
+            color: white;
+            max-width: 600px;
+        }
+        .main-point {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sub-point {
+            font-size: 1em;
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        hr {
+            border: 1px solid rgb(101, 252, 142);
+            margin: 20px 0;
+        }
+</style>
+</head>
+<body>
+    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="./static/img/runway.mp4" type="video/mp4">
+        
+    </video>
+<div class="nav">
+<div class="dropdown">
+  <img src="./static/img/pakshi.jpg" width="80" height="80"  onclick="toggleDropdown()">
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="./home.html">Home</a>
+    <a href="./about.html">About Us</a>
+
+  </div>
+</div>
+<marquee style="color: white; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+    Ai_Vacation_planner
+</marquee>
+
+<script>
+  function toggleDropdown() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+    }
+  }
+</script>
+</div>
+<fieldset>
+  <legend>Features</legend>
+  
+  <div class="feature">
+      <img src="./static/img/FINAL.jpg" style="border-radius: 0;" alt="APOD Image">
+      <div class="feature-details">
+          <div class="main-point"> Destination Information.</div>
+          <ul class="sub-point">
+              <li><strong>General Info:</strong> Provide details about the destination, including its history, culture, language, and climate..</li>
+              <li><strong>Local Attractions: </strong>: Highlight major tourist attractions, landmarks, and must-see places..</li>
+              
+          </ul>
+      </div>
+  </div>
+  <hr>
+  <div class="feature">
+    <img src="./static/img/train co.jpg" style="border-radius: 0;" alt="Mars Rover Photos Image">
+    <div class="feature-details">
+        <div class="main-point">Transportation:</div>
+        <ul class="sub-point">
+          <li><strong>Flight Information:</strong>: Show available flights, including schedules, prices, and airlines..</li>
+          
+      </ul>
+    </div>
+</div>
+<hr>
+  <div class="feature">
+      <img src="./static/img/Stock Market Live Today - Share Market 28092023.webp" style="border-radius: 0;" alt="Mars Rover Photos Image">
+      <div class="feature-details">
+          <div class="main-point">Itinerary Planning:</div>
+          <ul class="sub-point">
+            <li><strong>Custom Itineraries:</strong>: Users can create personalized itineraries based on their preferences and duration of stay..</li>
+            <li><strong></strong>: Suggest optimal times for visiting attractions to avoid crowds.</li>
+           
+        </ul>
+      </div>
+  </div>
+  <hr>
+  
+  <div class="feature">
+      <img src="./static/img/flight.mp4.jpg" style="border-radius: 0;" alt="EONET Image">
+      <div class="feature-details">
+          <div class="main-point">Airport Database Integration</div>
+          <ul class="sub-point">
+              <li><strong>Global Airport Database:</strong>: Integrate a comprehensive database of airports worldwide. This can be sourced from APIs such as Aviation Edge, OpenFlights, or public datasets like the Open Aviation Data.</li>
+              <li><strong> Airport Lookup</strong>: API Integration: Use an API to look up airport information based on the user’s input. If the airport exists, fetch and display relevant details.</li>
+              
+      </div>
+  </div>
+  
+  
+</fieldset>
+<div class="footer">
+  <div class="social-icons">
+      <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/seeram-naga-venkata-tarun-vardhan-2406b72b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./static/img/linkedin_3536569.png" height="20" width="20"></a>
+      <a href="https://tarunvardhan04.github.io/AI_VACATION_PLANNER/"><img src="./static/img/github_3291695.png" height="20" width="20"></a>
+      <a href="mailto: tarunseeram999@gmail.com"><img src="./static/img/envelope_9046102.png" height="20" width="20"></a>
+  </div>
+  <div class="contact-info">
+      
+      <p>Email: tarunseeram999@gmail.com</p>
+      
+  </div>
+</div>
+</body>
+</html>
